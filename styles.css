@@ -1,0 +1,572 @@
+/* ========================================
+   CRUZEIRO ESPORTE CLUBE - STYLESHEET
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-blue: #0056A4;
+    --secondary-blue: #003D7A;
+    --accent-red: #DC143C;
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+    --dark-gray: #333333;
+    --text-color: #333333;
+    --border-color: #E0E0E0;
+}
+
+/* ========================================
+   GENERAL STYLES
+   ======================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+/* ========================================
+   NAVIGATION BAR
+   ======================================== */
+
+.navbar {
+    background-color: var(--primary-blue);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: var(--white);
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: var(--white);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: var(--accent-red);
+    color: var(--white);
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    gap: 3rem;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 1.3rem;
+    color: var(--accent-red);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 86, 164, 0.3);
+}
+
+.btn-secondary {
+    background-color: var(--accent-red);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: #B01030;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(220, 20, 60, 0.3);
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   HIGHLIGHTS SECTION
+   ======================================== */
+
+.highlights {
+    background-color: var(--light-gray);
+    padding: 3rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.highlight-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-top: 4px solid var(--primary-blue);
+    transition: transform 0.3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+}
+
+.highlight-card h3 {
+    color: var(--primary-blue);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.highlight-card p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* ========================================
+   PAGE HEADER
+   ======================================== */
+
+.page-header {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+    color: var(--white);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* ========================================
+   CONTENT SECTION
+   ======================================== */
+
+.content-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.content-wrapper {
+    background-color: var(--white);
+}
+
+.content-wrapper h2 {
+    color: var(--primary-blue);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid var(--accent-red);
+    padding-bottom: 0.5rem;
+}
+
+.content-wrapper h3 {
+    color: var(--secondary-blue);
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.content-wrapper p {
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* ========================================
+   TITLES PAGE STYLES
+   ======================================== */
+
+.titles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.title-category {
+    background-color: var(--light-gray);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary-blue);
+}
+
+.title-category h3 {
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.title-list {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.title-list li {
+    background-color: var(--white);
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    color: var(--text-color);
+    font-weight: 500;
+    border-left: 3px solid var(--accent-red);
+    padding-left: 1rem;
+}
+
+.title-count {
+    font-weight: bold;
+    color: var(--accent-red);
+    font-size: 1.1rem;
+}
+
+.achievement-highlight {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.achievement-highlight h3 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.achievement-highlight p {
+    color: var(--white);
+    line-height: 1.8;
+}
+
+/* ========================================
+   PLAYERS PAGE STYLES
+   ======================================== */
+
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.player-card {
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 86, 164, 0.2);
+}
+
+.player-header {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-header h3 {
+    color: var(--white);
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.position {
+    background-color: var(--accent-red);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.player-body {
+    padding: 1.5rem;
+}
+
+.player-description {
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+.squad-note {
+    background-color: var(--accent-red);
+    color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* ========================================
+   OPINION PAGE STYLES
+   ======================================== */
+
+.opinion-content {
+    background-color: var(--light-gray);
+    padding: 3rem;
+    border-radius: 8px;
+}
+
+.opinion-box {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary-blue);
+}
+
+.opinion-box h2 {
+    color: var(--primary-blue);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.opinion-box h3 {
+    color: var(--secondary-blue);
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.opinion-box p {
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.footer {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+    .nav-menu {
+        gap: 1rem;
+    }
+
+    .nav-link {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .content-section {
+        padding: 2rem 1rem;
+    }
+
+    .opinion-content {
+        padding: 1rem;
+    }
+
+    .opinion-box {
+        padding: 1.5rem;
+    }
+
+    .titles-container,
+    .players-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .nav-link {
+        display: block;
+        text-align: center;
+        padding: 0.6rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .page-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .page-header p {
+        font-size: 0.9rem;
+    }
+
+    .content-wrapper h2 {
+        font-size: 1.5rem;
+    }
+
+    .content-wrapper h3 {
+        font-size: 1.1rem;
+    }
+
+    .player-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .highlights {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
