@@ -62,6 +62,17 @@ a {
     align-items: center;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
 .logo h1 {
     color: var(--white);
     font-size: 1.8rem;
